@@ -1,0 +1,131 @@
+{
+  "kamal": {
+    "name": "Kamal Joshi",
+    "email": "kamal.joshi@example.com",
+    "father": "Mahesh Joshi",
+    "mother": "Sunita Joshi",
+    "tenth": "84%",
+    "twelfth": "87%",
+    "sem1": "81%",
+    "sem2": "85%",
+    "gpa": "8.2",
+    "courses": [
+      {
+        "name": "Data Science",
+        "attendance": "91%",
+        "completionStatus": "Completed"
+      },
+      {
+        "name": "Machine Learning",
+        "attendance": "89%",
+        "completionStatus": "In Progress"
+      },
+      {
+        "name": "Python Programming",
+        "attendance": "86%",
+        "completionStatus": "Completed"
+      }
+    ],
+    "events": [
+      { "title": "Assignment 1 Submission", "date": "25th May" },
+      { "title": "Workshop on AI Ethics", "date": "30th May" },
+      { "title": "Semester Exam Schedule Released", "date": "1st June" }
+    ]
+  },
+  "aradhya": {
+    "name": "Aradhya Jaltare",
+    "email": "aradhya.jaltare@example.com",
+    "father": "Suresh Jaltare",
+    "mother": "Kavita Jaltare",
+    "tenth": "89%",
+    "twelfth": "90%",
+    "sem1": "87%",
+    "sem2": "89%",
+    "gpa": "8.6",
+    "courses": [
+      {
+        "name": "Web Development",
+        "attendance": "93%",
+        "completionStatus": "Completed"
+      },
+      {
+        "name": "Database Systems",
+        "attendance": "90%",
+        "completionStatus": "In Progress"
+      },
+      {
+        "name": "AI Ethics",
+        "attendance": "88%",
+        "completionStatus": "Completed"
+      }
+    ],
+    "events": [
+      { "title": "Database Systems Project Submission", "date": "20th May" },
+      { "title": "AI Ethics Seminar", "date": "27th May" }
+    ]
+  },
+  "deepesh": {
+    "name": "Deepesh",
+    "email": "deepesh@example.com",
+    "father": "Rajiv Kharkwal",
+    "mother": "Anita Kharkwal",
+    "tenth": "82%",
+    "twelfth": "85%",
+    "sem1": "80%",
+    "sem2": "84%",
+    "gpa": "7.9",
+    "courses": [
+      {
+        "name": "Cybersecurity",
+        "attendance": "89%",
+        "completionStatus": "In Progress"
+      },
+      {
+        "name": "Cloud Computing",
+        "attendance": "87%",
+        "completionStatus": "Completed"
+      },
+      {
+        "name": "Linux Fundamentals",
+        "attendance": "85%",
+        "completionStatus": "In Progress"
+      }
+    ],
+    "events": [
+      { "title": "Cloud Computing Exam", "date": "15th May" },
+      { "title": "Cybersecurity Workshop", "date": "22nd May" }
+    ]
+  },
+  "dhruv": {
+    "name": "Dhruv Gahtori",
+    "email": "dhruv.gahtori@example.com",
+    "father": "Nitin Gahtori",
+    "mother": "Priya Gahtori",
+    "tenth": "91%",
+    "twelfth": "93%",
+    "sem1": "90%",
+    "sem2": "92%",
+    "gpa": "9.0",
+    "courses": [
+      {
+        "name": "Networking",
+        "attendance": "95%",
+        "completionStatus": "Completed"
+      },
+      {
+        "name": "Java Programming",
+        "attendance": "92%",
+        "completionStatus": "Completed"
+      },
+      {
+        "name": "Software Engineering",
+        "attendance": "94%",
+        "completionStatus": "Completed"
+      }
+    ],
+    "events": [
+      { "title": "Networking Assignment Submission", "date": "18th May" },
+      { "title": "Software Engineering Workshop", "date": "25th May" }
+    ]
+  }
+}

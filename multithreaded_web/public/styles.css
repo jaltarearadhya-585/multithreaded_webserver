@@ -1,0 +1,334 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  min-height: 100vh;
+  background: linear-gradient(rgba(10, 10, 25, 0.85), rgba(15, 15, 40, 0.85)),
+    url("https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1400&q=80")
+      no-repeat center center fixed;
+  background-size: cover;
+  color: #eee;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column; /* changed to column for better centering */
+}
+
+/* Sidebar */
+.sidebar {
+  width: 220px;
+  background-color: #003366;
+  color: #f0f4ff;
+  height: 100vh;
+  padding: 30px 20px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  overflow-y: auto;
+  box-shadow: 3px 0 15px rgba(0, 0, 0, 0.8);
+  z-index: 1000;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.sidebar h2 {
+  font-size: 28px;
+  margin-bottom: 35px;
+  font-weight: 800;
+  text-align: center;
+  color: #a0b9ff;
+  text-shadow: 0 0 10px #a0b9ffaa;
+}
+
+.sidebar ul {
+  list-style: none;
+}
+
+.sidebar ul li {
+  margin: 20px 0;
+}
+
+.sidebar ul li a {
+  color: #d0d9ff;
+  text-decoration: none;
+  display: block;
+  padding: 10px 16px;
+  border-radius: 6px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  font-size: 1rem;
+  box-shadow: inset 0 0 8px transparent;
+}
+
+.sidebar ul li a:hover,
+.sidebar ul li a:focus {
+  background-color: #0f4fff;
+  color: #fff;
+  box-shadow: inset 0 0 15px #0f4fffcc;
+  outline: none;
+}
+
+/* Main Wrapper */
+/* Default - Login Page: Center horizontally without sidebar margin */
+.login-wrapper {
+  margin: 60px auto; /* centered horizontally with top margin */
+  max-width: 450px;
+  width: 100%;
+  position: relative;
+  text-align: center;
+  min-height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 60px 40px;
+}
+
+/* Dashboard mode - space for sidebar */
+body.dashboard-mode .login-wrapper {
+  margin-left: 240px; /* space for sidebar */
+  min-height: 90vh;
+}
+
+/* Container box */
+.container {
+  background: rgba(25, 25, 45, 0.95);
+  padding: 80px 40px 50px;
+  border-radius: 18px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(160, 180, 255, 0.3);
+  color: #dde2ff;
+  text-align: left;
+  margin: 0 auto;
+  transition: margin-left 0.3s ease;
+}
+
+/* Headings */
+h1 {
+  margin-bottom: 35px;
+  font-weight: 900;
+  color: #7fa0ff;
+  letter-spacing: 1.6px;
+  text-shadow: 0 0 12px rgba(127, 160, 255, 0.7);
+  text-align: center;
+  font-size: 2.4rem;
+}
+
+h2 {
+  margin-bottom: 25px;
+  font-weight: 700;
+  color: #a8c0ff;
+  text-align: center;
+  font-size: 1.8rem;
+  text-shadow: 0 0 8px #a8c0ffcc;
+}
+
+/* Login Avatar */
+/* Default login page avatar position */
+.login_avatar {
+  position: absolute;
+  top: 10px; /* some space below top browser bar */
+  left: 50%;
+  transform: translateX(-50%);
+  height: 110px;
+  width: 110px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 5px solid rgba(255, 255, 255, 0.25);
+  background-color: rgba(40, 40, 70, 0.9);
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.9);
+  z-index: 3;
+}
+
+/* Dashboard mode avatar position */
+body.dashboard-mode .login_avatar {
+  top: -60px; /* original avatar position when sidebar exists */
+}
+
+.login_avatar img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  filter: brightness(0.85);
+  border-radius: 50%;
+  transition: filter 0.3s ease;
+}
+
+.login_avatar img:hover {
+  filter: brightness(1);
+  cursor: default;
+}
+
+/* Input Fields */
+input[type="text"],
+input[type="password"] {
+  display: block;
+  width: 100%;
+  padding: 15px 16px;
+  margin-bottom: 22px;
+  border: none;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.15);
+  color: #f0f0f0;
+  box-shadow: inset 0 3px 8px rgba(255, 255, 255, 0.22);
+  transition: background-color 0.35s ease, color 0.35s ease;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+}
+
+input::placeholder {
+  color: #bbb;
+  font-style: italic;
+}
+
+input:focus {
+  background-color: rgba(255, 255, 255, 0.35);
+  color: #fff;
+  box-shadow: inset 0 3px 10px rgba(255, 255, 255, 0.5);
+}
+
+/* Buttons */
+button {
+  background: linear-gradient(135deg, #004080, #0066cc);
+  border: none;
+  border-radius: 12px;
+  padding: 16px 0;
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #fff;
+  cursor: pointer;
+  width: 100%;
+  box-shadow: 0 0 18px #0057b8cc;
+  transition: background 0.4s ease, box-shadow 0.4s ease;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+button:hover,
+button:focus {
+  background: linear-gradient(135deg, #0066cc, #004080);
+  box-shadow: 0 0 28px #004dbbdd;
+  outline: none;
+}
+
+/* Logout Button */
+#logoutBtn {
+  margin-top: 30px;
+  background: linear-gradient(135deg, #cc0000, #ff4c4c);
+  box-shadow: 0 0 20px #ff3d3dcc;
+  font-weight: 700;
+  font-size: 1.1rem;
+  border-radius: 14px;
+  transition: background 0.35s ease, box-shadow 0.35s ease;
+}
+
+#logoutBtn:hover,
+#logoutBtn:focus {
+  background: linear-gradient(135deg, #ff4c4c, #cc0000);
+  box-shadow: 0 0 28px #ff2929dd;
+  outline: none;
+}
+
+/* Message below login */
+#loginMessage {
+  margin-top: 14px;
+  font-weight: 700;
+  min-height: 28px;
+  color: #ff6b6b;
+  text-align: center;
+  font-size: 1rem;
+  text-shadow: 0 0 4px #ff6b6bbb;
+}
+
+/* Utility */
+.hidden {
+  display: none;
+}
+
+/* Student info display */
+#studentInfo {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #ccd9ff;
+  padding: 12px 20px;
+  background-color: rgba(10, 10, 25, 0.7);
+  border-radius: 12px;
+  box-shadow: inset 0 0 20px #1a1a3daa;
+  margin-bottom: 15px;
+  min-height: 180px;
+  user-select: text;
+  letter-spacing: 0.04em;
+}
+
+#studentContent {
+  margin-left: 220px; /* space for sidebar */
+  margin-right: auto; /* auto right margin to help centering */
+  padding: 30px 40px;
+  max-width: 700px; /* max width for content */
+  background: rgba(20, 20, 40, 0.9);
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.8);
+  color: #ccd9ff;
+  font-size: 1.2rem;
+  letter-spacing: 0.03em;
+  line-height: 1.6;
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  box-sizing: border-box;
+}
+
+/* Centered Course List */
+
+#courses {
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #c0d9ff;
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  min-height: 200px;
+  flex-direction: column;
+  margin: 0 auto; /* Center block itself */
+  max-width: 600px; /* Optional: limit width */
+  padding: 0 20px; /* Optional: horizontal padding */
+  box-sizing: border-box; /* Ensure padding doesn’t expand width */
+}
+
+#courses p {
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  font-size: 2rem;
+  color: #e0e0e0;
+  margin-top: 20px;
+}
+
+/* Centered Attendance Section */
+#attendance {
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #c0d9ff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 200px;
+  flex-direction: column;
+}
+
+#attendance p {
+  font-size: 2rem;
+  color: #e0e0e0;
+  margin-top: 20px;
+}
